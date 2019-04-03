@@ -13,8 +13,50 @@
 <body>
     <div class="jumbotron" id="banner">
         <h1 class="display-3">NYT Search</h1>
-      
     </div>
+
+    <form>
+        <fieldset>
+            <legend>Search Parameters</legend>
+            
+            <div class="form-group">
+                <label for="exampleInputEmail1">Search Term:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleSelect1">Number of Records to Retrieve:</label>
+                <select class="form-control" id="exampleSelect1">
+                    <option>1</option>
+                    <option>5</option>
+                    <option>10</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Start Year (Optional):</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">End Year (Optional):</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Clear Results</button>
+        </fieldset>
+    </form>
+
+    <div class="card border-primary mb-3" id = "results" style="max-width: 20rem;">
+            <div class="card-header">Top articles</div>
+            <div class="card-body">
+              <h4 class="card-title">Primary card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+    </div>
+          
+   <footer>FOOTER</footer>
 </body>
 
 

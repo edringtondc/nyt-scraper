@@ -26,6 +26,7 @@ $(document).ready(function () {
     const createURL = (searchTermData) => {
         let URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTermData}&api-key=VpZUli6fofAqZfGkGvU4883LHQZShlgE`
         console.log(URL)
+        getArticles(URL)
     }
 
 
@@ -35,6 +36,20 @@ $(document).ready(function () {
 
 
     //AJAX function
+
+    const getArticles = (URL) => {
+        $.ajax({ 
+            url: URL,
+            method: "GET"
+         
+        }).then(function(res){
+            let data = res.response.docs
+            console.log(res)
+            console.log(`Snippet: ${data[0].snippet} `)
+        })
+    }
+
+
     //GET
     //THEN
     //Take json and return to front end

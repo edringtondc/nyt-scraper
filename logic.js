@@ -38,18 +38,37 @@ $(document).ready(function () {
     //AJAX function
 
     const getArticles = (URL) => {
-        $.ajax({ 
+        $.ajax({
             url: URL,
             method: "GET"
-         
-        }).then(function(res){
+
+        }).then(function (res) {
             let data = res.response.docs
             console.log(res)
-            console.log(`Snippet: ${data[0].snippet} `)
+
+            renderResults(data);
+
         })
     }
 
+    let renderResults = (data) => {
+        let resultsToReturn = $("#numRec").val();
+        console.log(resultsToReturn)
 
+
+        for (let i = 0; i < resultsToReturn; i++) {
+            let title = data[i].headline.main;
+            let byline = data[i].snippet;
+
+            let newTR = $("<tr>");
+            let newH3 = $("<h3>").text(title);
+            let newP = $("<p>").text(byline);
+
+            newTR.append(newH3, newP);
+            newTR.addClass("table-primary");
+            $("#results > tbody").append(newTR);
+        }
+    }
     //GET
     //THEN
     //Take json and return to front end

@@ -10,16 +10,10 @@ $(document).ready(function () {
         let endYearData = $("#endYear").val()
         createURL(searchTermData, startYearData, endYearData);
         $("#searchTerm").val("");
-
         $("#startYear").val("");
         $("#endYear").val("");
-
-        
-
-        console.log(`searching ${searchTermData} ${numRecordsData} ${startYearData} ${endYearData}`);
-
-
     });
+
     $("#clearBtn").on("click", event => {
         event.preventDefault();
         $("#results > tbody").empty();
@@ -31,48 +25,29 @@ $(document).ready(function () {
 
         if (beginDate) {
             baseURL + `&begin_date=${beginDate}0101`;
-
         }
-
         if (endDate) {
             baseURL + `&end_date=${endDate}1231`
         }
 
         let fullURL = baseURL + apiKey;
 
-
-
-
-
-
-        console.log(fullURL);
         getArticles(fullURL);
     }
-
-
-
-
-
-
-
 
     const getArticles = (URL) => {
         $.ajax({
             url: URL,
-            method: "GET",
+            method: "GET"
         }).then(function (res) {
             let data = res.response.docs
-            console.log(res)
-
             renderResults(data);
-
         })
     }
 
     let renderResults = (data) => {
         let resultsToReturn = $("#numRec").val();
         console.log(resultsToReturn)
-
 
         for (let i = 0; i < resultsToReturn; i++) {
             let title = data[i].headline.main;

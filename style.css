@@ -1,3 +1,21 @@
 footer {
-    background-color: white;
+    background-color: #073642;
+}
+
+tr {
+    border: 10px solid #073642;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+#articlesDiv {
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
 }

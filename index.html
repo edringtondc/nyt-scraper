@@ -6,8 +6,8 @@
     <title>NYT Search</title>
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/solar/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-8nq3OiMMgrVFAHyRMMO+DTfMEciSY+c3Awhj/5ljQ1xck1Uv2BUtMjsjLD8GT5Er" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
 </head>
 
 <body>
@@ -16,12 +16,13 @@
     </div>
 
     <form>
-        <fieldset id = "searchForm">
+        <fieldset id="searchForm">
             <legend>Search Parameters</legend>
-            
+
             <div class="form-group">
                 <label for="searchTerm">Search Term:</label>
-                <input type="text" class="form-control" id="searchTerm" aria-describedby="searchTerm" placeholder="Enter a search term here; e.g. 'Stock Market'">
+                <input type="text" class="form-control" id="searchTerm" aria-describedby="searchTerm"
+                    placeholder="Enter a search term here; e.g. 'Stock Market'">
             </div>
 
             <div class="form-group">
@@ -35,7 +36,8 @@
 
             <div class="form-group">
                 <label for="startYear">Start Year (Optional):</label>
-                <input type="text" class="form-control" id="startYear" aria-describedby="startYear" placeholder="e.g. 1990">
+                <input type="text" class="form-control" id="startYear" aria-describedby="startYear"
+                    placeholder="e.g. 1990">
             </div>
 
             <div class="form-group">
@@ -47,25 +49,27 @@
             <button id="clearBtn" type="submit" class="btn btn-primary">Clear Results</button>
         </fieldset>
     </form>
+    <div class="mb-2" id="articlesDiv">
 
-    <table id = "results" class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Article Results: </th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table> 
-          
-   <footer>FOOTER</footer>
+
+        <table id="results" class="table-primary table table-hover">
+            <thead>
+                <tr>
+                    <th>Article Results: </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+
+    <footer>FOOTER</footer>
 </body>
 
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="logic.js" ></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="logic.js"></script>
 
 </html>

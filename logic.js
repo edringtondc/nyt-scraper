@@ -58,7 +58,7 @@ $(document).ready(function () {
             let newP = $("<p>").text(byline);
 
             newTR.append(newH3, newP);
-            newTR.addClass("table-primary");
+            // newTR.addClass("table-primary");
             $("#results > tbody").append(newTR);
         }
     }

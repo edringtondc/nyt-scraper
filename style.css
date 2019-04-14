@@ -3,6 +3,9 @@ footer {
     text-align: center;
 }
 
+h1 {
+    text-align: center;
+}
 tr {
     border: 10px solid #073642;
 }
